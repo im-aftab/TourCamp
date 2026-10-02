@@ -1,0 +1,38 @@
+{
+  "name": "tourcamp",
+  "version": "1.0.0",
+  "description": "\"Reach your destination ahead of time\"",
+  "keywords": [
+    "Tour",
+    "travel",
+    "vacation",
+    "holidays",
+    "loveones",
+    "partners",
+    "destination",
+    "nature",
+    "love",
+    "romance"
+  ],
+  "homepage": "https://github.com/im-aftab/TourCamp#readme",
+  "bugs": {
+    "url": "https://github.com/im-aftab/TourCamp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/im-aftab/TourCamp.git"
+  },
+  "license": "ISC",
+  "author": "Aftab Ansari",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^9.10.3"
+  }
+}
