@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= destination.name %></title>
+</head>
+<body>
+    <h1 style="color:brown; text-align:center;"><%= destination.name %><span><sub><u><%= destination.location %></u></sub></span></h1>
+    <p><%= destination.description %></p>
+    <br><br>
+    <button><a href="/destinations">Back to All</a></button>
+    <br>
+    <button><a href="/destinations/<%= destination._id %>/edit">Edit Destination</a></button>
+</body>
+</html>
