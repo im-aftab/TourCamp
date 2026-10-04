@@ -1,8 +1,10 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const ejsMate = require('ejs-mate');
 const TourDest = require("./models/tourdest");
 const methodOverride = require("method-override");
+const { error } = require("console");
 
 mongoose.connect("mongodb://localhost:27017/tourDestDB")
 
@@ -15,6 +17,7 @@ db.once("open", () => {
 
 const app = express();
 
+app.engine('ejs',ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -41,7 +44,6 @@ app.get("/destinations", async (req, res) => {
 app.get('/destinations/:id', async(req,res) =>{
     const destinations = await TourDest.findById(req.params.id);
     res.render("destinations/show", {destination: destinations});
-    console.log(destinations);
 });
 
 //POST route to create a new destination
@@ -58,7 +60,17 @@ app.put('/destinations/:id', async(req,res) =>{
     }
     res.redirect(`/destinations/${destination._id}`);
 });
+app.delete('/destinations/:id', async(req, res)=>{
+    const {id}= req.params;
+    await TourDest.findByIdAndDelete(id);
+    res.redirect('/destinations')
+})
 
+// Catch-all 404 handler (must be last)
+app.use((req, res) => {
+    const url =  `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+    res.status(404).render("error",{url});
+});
 
 app.listen(3000, () => {
     console.log("Server is running on https://localhost:3000");

@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Destinations</title>
-</head>
-<body>
-    <h1>All Destinations</h1>
-    <ul>
-        <% for (let dest of destinations){ %>
-        <li><a href="/destinations/<%= dest._id %>"><%= dest.name %></a></li>
-        <% } %>
-    </ul>
+<% layout('./layouts/boilerplate')%>
+<h1>All Destinations</h1>
+<ul>
+    <% for (let dest of destinations){ %>
+    <li><a href="/destinations/<%= dest._id %>"><%= dest.name %></a></li>
+    <% } %>
+</ul>
 
-    <button><a href="/">Home</a></button>
-    
-</body>
-</html>
+<button><a href="/">Home</a></button>

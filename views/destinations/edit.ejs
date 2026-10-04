@@ -1,27 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit <%= destination.name %></title>
-</head>
-<body>
-    <h1 Style="color:rgb(170, 13, 13); text-align:center;">Edit <%= destination.name %></h1>
-    <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
+<% layout('./layouts/boilerplate')%>
+<h1 Style="color:rgb(170, 13, 13); text-align:center;">Edit <%= destination.name %></h1>
+<form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="destination[name]" value="<%= destination.name %>" required>
-        
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="destination[location]" value="<%= destination.location %>" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="destination[name]" value="<%= destination.name %>" required>
 
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="destination[description]" value="<%= destination.description %>" required>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="destination[location]" value="<%= destination.location %>" required>
 
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="destination[date]" value="<%= destination.date.toISOString().slice(0, 10) %>" required>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="destination[description]" value="<%= destination.description %>"
+            required>
 
-        <button type="submit">Update Destination</button>
-    </form>
-</body>
-</html>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="destination[date]" value="<%= destination.date.toISOString().slice(0, 10) %>"
+            required>
+
+    <button type="submit">Update Destination</button>
+</form>
