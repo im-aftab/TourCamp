@@ -1,9 +1,18 @@
 <% layout('./layouts/boilerplate')%>
 <h1>All Destinations</h1>
-<ul>
-    <% for (let dest of destinations){ %>
-    <li><a href="/destinations/<%= dest._id %>"><%= dest.name %></a></li>
-    <% } %>
-</ul>
+<% for (let dest of destinations){ %>
+    <div class="card mb-3" style="width: 18rem;">
+        <div class="row">
+            <div class="cm-md-4">
+                <img src="<%= dest.image %>" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title"><%= dest.name %></h5>
+                    <p class="card-text"><%= dest.description %></p>
+                    <a href="/Destinations/<%= dest._id %>" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
 
-<button><a href="/">Home</a></button>
+

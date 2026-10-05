@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1118"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#141e30"/>
+    </linearGradient>
+
+    <!-- Saffron & Sunset Gradient (Energy & Indian Heritage) -->
+    <linearGradient id="saffronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9933"/>
+      <stop offset="60%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+
+    <!-- Emerald Teal Gradient (Nature & Discovery) -->
+    <linearGradient id="tealGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Camera/Lens Ring Gradient -->
+    <linearGradient id="lensRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Sun Accent Gradient -->
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="480" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Decorative Grid/Atmosphere Rings -->
+  <circle cx="210" cy="240" r="160" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1.5"/>
+  <circle cx="210" cy="240" r="190" fill="none" stroke="#ffffff" stroke-opacity="0.02" stroke-dasharray="6 6"/>
+
+  <!-- ================= LOGO ICON ================= -->
+  <g transform="translate(10, 0)">
+    <!-- Base Glow behind Pin -->
+    <path d="M 200 80
+             C 130 80, 85 135, 85 205
+             C 85 275, 175 365, 200 395
+             C 225 365, 315 275, 315 205
+             C 315 135, 270 80, 200 80 Z"
+          fill="url(#saffronGrad)" opacity="0.25" filter="url(#glow)"/>
+
+    <!-- Map Pin Outer Shell -->
+    <path d="M 200 80
+             C 130 80, 85 135, 85 205
+             C 85 278, 175 365, 200 395
+             C 225 365, 315 278, 315 205
+             C 315 135, 270 80, 200 80 Z"
+          fill="url(#saffronGrad)"/>
+
+    <!-- Inner Pin Cutout (Creates the Frame) -->
+    <path d="M 200 102
+             C 142 102, 105 148, 105 205
+             C 105 262, 175 338, 200 365
+             C 225 338, 295 262, 295 205
+             C 295 148, 258 102, 200 102 Z"
+          fill="#0c1421"/>
+
+    <!-- Camera Viewfinder / Frame Geometry inside Pin -->
+    <!-- Viewfinder Corners (Visualizing Crowd-Sourced Photo Uploads) -->
+    <path d="M 148 165 L 148 152 Q 148 148 152 148 L 165 148" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 235 148 L 248 148 Q 252 148 252 152 L 252 165" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 148 245 L 148 258 Q 148 262 152 262 L 165 262" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 235 262 L 248 262 Q 252 262 252 258 L 252 245" fill="none" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Lens Window / Scenic View Inside -->
+    <g>
+      <clipPath id="lensClip">
+        <circle cx="200" cy="205" r="46"/>
+      </clipPath>
+
+      <!-- Lens Sky -->
+      <circle cx="200" cy="205" r="46" fill="#1e293b"/>
+
+      <!-- Rising Sun (Indian Dawn / Holiday Inspiration) -->
+      <circle cx="200" cy="190" r="14" fill="url(#sunGrad)" clip-path="url(#lensClip)"/>
+
+      <!-- Himalayan Peak Silhouettes -->
+      <polygon points="135,255 185,185 220,255" fill="#334155" clip-path="url(#lensClip)"/>
+      <polygon points="175,255 215,175 265,255" fill="url(#tealGrad)" clip-path="url(#lensClip)"/>
+      <polygon points="215,175 225,195 210,202" fill="#E2E8F0" clip-path="url(#lensClip)"/>
+
+      <!-- Iconic Indian Architectural Dome Motif (Subtle Taj/Temple Silhouette) -->
+      <path d="M 194 252
+               C 194 242, 197 236, 200 232
+               C 203 236, 206 242, 206 252 Z"
+            fill="#FFFFFF" opacity="0.9" clip-path="url(#lensClip)"/>
+    </g>
+
+    <!-- Camera Lens Border Ring with Aperture Notch Marks -->
+    <circle cx="200" cy="205" r="46" fill="none" stroke="url(#lensRing)" stroke-width="3.5"/>
+    <circle cx="200" cy="205" r="52" fill="none" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 8"/>
+
+    <!-- Shutter Sensor Flash Indicator (Top Right of Pin) -->
+    <circle cx="254" cy="146" r="4" fill="#F43F5E"/>
+  </g>
+
+  <!-- ================= TYPOGRAPHY & BRANDING ================= -->
+  <!-- Main Brand Title -->
+  <text x="375" y="215" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" font-weight="900" font-size="64" letter-spacing="-1">
+    <tspan fill="#FFFFFF">Tour</tspan><tspan fill="url(#saffronGrad)">Dest</tspan>
+  </text>
+
+  <!-- India Flag Color Palette Indicator Bar -->
+  <g transform="translate(378, 235)">
+    <rect x="0" y="0" width="36" height="4.5" rx="2.25" fill="#FF9933"/>
+    <rect x="42" y="0" width="36" height="4.5" rx="2.25" fill="#FFFFFF"/>
+    <rect x="84" y="0" width="36" height="4.5" rx="2.25" fill="#138808"/>
+    <!-- Destination Geo-dot trail -->
+    <circle cx="134" cy="2.25" r="2.25" fill="#38BDF8" opacity="0.7"/>
+    <circle cx="146" cy="2.25" r="2.25" fill="#38BDF8" opacity="0.4"/>
+    <circle cx="158" cy="2.25" r="2.25" fill="#38BDF8" opacity="0.2"/>
+  </g>
+
+  <!-- Subtitle / Mission Statement -->
+  <text x="378" y="274" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="15" fill="#94A3B8" letter-spacing="2.2">
+    EXPLORE INDIA THROUGH REAL LENSES
+  </text>
+
+  <!-- Badge: "Location First, Not Profiles" Concept -->
+  <g transform="translate(378, 298)">
+    <rect width="248" height="30" rx="15" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <!-- Photo geotag pin micro icon -->
+    <path d="M 18 11 C 15.2 11 13 13.2 13 16 C 13 19.5 18 24 18 24 C 18 24 23 19.5 23 16 C 23 13.2 20.8 11 18 11 Z" fill="#10B981"/>
+    <circle cx="18" cy="15.5" r="1.5" fill="#0F172A"/>
+    <text x="29" y="19.5" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="11.5" fill="#CBD5E1" letter-spacing="0.5">
+      Geo-Tagged Photo Feeds &amp; Trips
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <defs>
+    <!-- Gradient for the map pin border -->
+    <linearGradient id="pinGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF3030;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark inner background of the map pin -->
+  <path d="M200,10 C120,10 50,75 50,160 C50,260 200,490 200,490 C200,490 350,260 350,160 C350,75 280,10 200,10 Z" fill="#0A111F"/>
+
+  <!-- Gradient border of the map pin -->
+  <path d="M200,10 C120,10 50,75 50,160 C50,260 200,490 200,490 C200,490 350,260 350,160 C350,75 280,10 200,10 Z M200,30 C265,30 325,85 325,160 C325,240 200,440 200,440 C200,440 75,240 75,160 C75,85 135,30 200,30 Z" fill="url(#pinGradient)"/>
+
+  <!-- Group for camera and landscape elements -->
+  <g transform="translate(115, 80)">
+    <!-- Blue circular border -->
+    <circle cx="85" cy="85" r="70" fill="none" stroke="#50A0FF" stroke-width="6"/>
+
+    <!-- Inside the circle: Sky -->
+    <circle cx="85" cy="85" r="67" fill="#2050C0"/>
+
+    <!-- Right Mountain (Green) -->
+    <path d="M85,152 L160,152 L115,40 Z" fill="#20C070"/>
+    <!-- Right Mountain Peak (White) -->
+    <path d="M115,40 L128,72 L110,80 Z" fill="#FFFFFF"/>
+    <!-- Right Mountain Snow (White, base) -->
+    <path d="M110,135 L120,135 L115,145 Z" fill="#FFFFFF"/>
+
+    <!-- Left Mountain (Dark Grey) -->
+    <path d="M25,152 L110,152 L70,70 Z" fill="#303840"/>
+    <!-- Left Mountain Peak (White) -->
+    <path d="M70,70 L80,95 L65,100 Z" fill="#FFFFFF"/>
+
+    <!-- Sun (Orange) -->
+    <circle cx="85" cy="70" r="18" fill="#FF9000"/>
+
+    <!-- Cloud (White) -->
+    <path d="M40,110 C35,110 32,106 32,102 C32,98 35,95 40,95 C41,95 42,95 43,96 C45,92 49,90 53,90 C59,90 64,95 64,101 C64,101 64,102 64,102 C66,102 68,104 68,106 C68,108 66,110 64,110 Z" fill="#FFFFFF"/>
+
+    <!-- Viewfinder Corners (Cyan) -->
+    <g stroke="#50E0FF" stroke-width="5" fill="none" stroke-linecap="round">
+      <!-- Top Left -->
+      <path d="M10,10 L30,10 M10,10 L10,30"/>
+      <!-- Top Right -->
+      <path d="M160,10 L140,10 M160,10 L160,30"/>
+      <!-- Bottom Left -->
+      <path d="M10,160 L30,160 M10,160 L10,140"/>
+      <!-- Bottom Right -->
+      <path d="M160,160 L140,160 M160,160 L160,140"/>
+    </g>
+
+    <!-- Red Recording Dot -->
+    <circle cx="160" cy="10" r="6" fill="#FF4060"/>
+  </g>
+
+  <!-- Text "TG" (Peach color) -->
+  <text x="185" y="330" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="#FFD0B0" text-anchor="middle">T</text>
+  <text x="205" y="360" font-family="sans-serif" font-size="70" font-weight="bold" fill="#FFD0B0" text-anchor="middle">G</text>
+</svg>

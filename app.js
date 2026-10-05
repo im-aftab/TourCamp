@@ -6,7 +6,7 @@ const TourDest = require("./models/tourdest");
 const methodOverride = require("method-override");
 const { error } = require("console");
 
-mongoose.connect("mongodb://localhost:27017/tourDestDB")
+mongoose.connect("mongodb://localhost:27017/seedDB")
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -24,6 +24,9 @@ app.set('views', path.join(__dirname, 'views'));
 // Getting the data from the form
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+
+app.use(express.static('Public'));
+
 
 //Routes
 
