@@ -1,20 +1,38 @@
 <% layout('./layouts/boilerplate')%>
 <h1 Style="color:rgb(170, 13, 13); text-align:center;">Edit <%= destination.name %></h1>
-<form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="destination[name]" value="<%= destination.name %>" required>
+<div class="col-6 offset-3 ">
+    <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label" >Name:</label>
+            <input type="text" class="form-control" id="name" name="destination[name]" value="<%= destination.name %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location:</label>
+            <input type="text" class="form-control" id="location" name="destination[location]" value="<%= destination.location %>" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" id="description" name="destination[description]" rows="1" style="resize: none; overflow:hidden;" required><%= destination.description %></textarea>
+        </div>
+        <div class="mb-5">
+            <label for="date" class="form-label">Date:</label>
+            <input type="date" class="form-control" id="date" name="destination[date]" value="<%= destination.date.toISOString().slice(0, 10) %>"required>
+        </div>
+        <div class="mb-5">
+            <button type="submit" class="btn btn-primary" >Update Destinaiton</button>
+        </div>
+        
+    </form>
+</div>
+<script>
+  const textarea = document.getElementById('description');
+// Auto-fit height on load
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
 
-    <label for="location">Location:</label>
-    <input type="text" id="location" name="destination[location]" value="<%= destination.location %>" required>
-
-    <label for="description">Description:</label>
-    <input type="text" id="description" name="destination[description]" value="<%= destination.description %>"
-            required>
-
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="destination[date]" value="<%= destination.date.toISOString().slice(0, 10) %>"
-            required>
-
-    <button type="submit">Update Destination</button>
-</form>
+  textarea.addEventListener('input', function () {
+    this.style.height = 'auto';   // reset height
+    this.style.height = this.scrollHeight + 'px'; // set new height
+  });
+</script>

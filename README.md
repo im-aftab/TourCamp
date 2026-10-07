@@ -49,6 +49,9 @@ TourCamp/
 ## Installation
 
 1. Clone the repository.
+```bash
+git clone 'https://github.com/im-aftab/TourCamp'
+```
 2. Install dependencies:
 
 ```bash
