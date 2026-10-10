@@ -2,18 +2,33 @@
 <h1 Style="color:rgb(170, 13, 13); text-align:center;">Edit <%= destination.name %></h1>
 
 <div class="col-6 offset-3 ">
-    <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
+    <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST" novalidate class="validated-form">
         <div class="mb-3">
             <label for="name" class="form-label" >Name:</label>
             <input type="text" class="form-control" id="name" name="destination[name]" value="<%= destination.name %>" required>
+            <div class="invalid-feedback">
+                Please enter Name in Title Case
+            </div>
+            <div class="valid-feedback">
+                Looks good! Your text is in Title Case.
+            </div>
         </div>
         <div class="mb-3">
             <label for="location" class="form-label">Location:</label>
             <input type="text" class="form-control" id="location" name="destination[location]" value="<%= destination.location %>" required>
+            <div class="invalid-feedback">
+                Please enter Location in Title Case.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description:</label>
             <textarea class="form-control" id="description" name="destination[description]" rows="1" style="resize: none; overflow:hidden;" required><%= destination.description %></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
         <div class="mb-5">
             <label for="date" class="form-label">Date:</label>
@@ -25,14 +40,6 @@
         
     </form>
 </div>
-<script>
-  const textarea = document.getElementById('description');
-// Auto-fit height on load
-  textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + 'px';
 
-  textarea.addEventListener('input', function () {
-    this.style.height = 'auto';   // reset height
-    this.style.height = this.scrollHeight + 'px'; // set new height
-  });
-</script>
+<script src="/scripts/formValidator.js"></script>
+<script src="/scripts/textArea.js"></script>

@@ -27,7 +27,7 @@ The application stores travel records in MongoDB and renders pages with EJS temp
 
 ## Project Structure
 
-```text
+```
 TourCamp/
 ├── app.js                 # Express server and route definitions
 ├── models/
@@ -40,9 +40,16 @@ TourCamp/
 │   ├── layouts/          # Shared EJS layouts
 │   ├── partials/         # Reusable partials
 │   ├── home.ejs          # Landing page
-│   └── error.ejs         # 404 error page
+│   └── error.ejs         # 404 error page 
+├── scripts/
+|   └── errorHandler.js   # AppError + wrapAsync
+├── Public
+|   └── scripts/
+|          └──textarea.js 
+|
 ├── package.json
-├── package-lock.json
+├── package-lock.json 
+├──.gitignore
 └── README.md
 ```
 

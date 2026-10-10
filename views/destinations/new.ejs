@@ -1,7 +1,7 @@
 <% layout('./layouts/boilerplate')%>
 <h1 class="text-center text-denger">Add a New Destination</h1>
 <div class="col-6 offset-3 ">
-    <form action="/destinations" method="POST">
+    <form action="/destinations" method="POST" novalidate class="validated-form">
         <div class="mb-3">
             <label for="name" class="form-label" >Name:</label>
             <input type="text" class="form-control" id="name" name="name" required>
@@ -24,10 +24,5 @@
         
     </form>
 </div>
-<script>
-  const textarea = document.getElementById('description');
-  textarea.addEventListener('input', function () {
-    this.style.height = 'auto';   // reset height
-    this.style.height = this.scrollHeight + 'px'; // set new height
-  });
-</script>
+<script src="/scripts/formValidator.js"></script>
+<script src="/scripts/textArea.js"></script>

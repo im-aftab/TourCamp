@@ -17,7 +17,8 @@ const tourDestSchema = new Schema({
         type: String
     },
     image: {
-        type: String
+        type: String,
+        default : `https://picsum.photos/400?random=${Math.random()}`
     }
 });
 
