@@ -1,5 +1,13 @@
 
+
+<p align="center">
+  <img src="https://github.com/im-aftab/TourCamp/blob/main/Public/logos/tourDest.svg" alt="TourCamp Banner" width="100%" />
+</p>
+
+
+
 # TourCamp
+
 
 **TourCamp** is a lightweight travel destination app built with **Express.js**, **MongoDB**, and **EJS templates**. It enables users to browse, add, edit, and delete travel destinations — a simple CRUD‑based trip planner for showcasing places to visit.
 
