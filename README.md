@@ -1,3 +1,4 @@
+
 # TourCamp
 
 **TourCamp** is a lightweight travel destination app built with **Express.js**, **MongoDB**, and **EJS templates**. It enables users to browse, add, edit, and delete travel destinations — a simple CRUD‑based trip planner for showcasing places to visit.
@@ -29,7 +30,7 @@ This makes it easy to manage an itinerary or build a travel inspiration board.
 ---
 
 ## 🛠 Tech Stack
-```
+
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -40,7 +41,7 @@ This makes it easy to manage an itinerary or build a travel inspiration board.
 ---
 
 ## 📂 Project Structure
-```
+```text
 TourCamp/
 ├── app.js                 # Express server & routes
 ├── models/
@@ -64,22 +65,26 @@ TourCamp/
 ├── .gitignore
 └── README.md
 ```
-
 ---
 
 ## ⚙️ Installation
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/im-aftab/TourCamp
-   ```
+
+```bash
+git clone https://github.com/im-aftab/TourCamp
+```
+
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+```bash
+npm install
+```
 3. Ensure MongoDB is running locally:
-   ```text
-   mongodb://localhost:27017/seedDB
-   ```
+
+```text
+mongodb://localhost:27017/seedDB
+```
 
 ---
 
@@ -164,4 +169,3 @@ It is not yet configured for production deployment, authentication, or advanced 
 
 ## 📄 License
 Licensed under the **ISC License**.
-```
